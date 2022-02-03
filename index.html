@@ -38,6 +38,8 @@
    <h1>Hello World</h1>
    <p>I'm hosted with GitHub Pages.</p>
    
+   <p id="demo"></p>
+   
    <div class="container">
   <div class="inner-container">
     <p>This example demonstrates the effect of zooming the page in
@@ -60,6 +62,12 @@ const updatePixelRatio = () => {
 }
 
 updatePixelRatio();
+      
+var w = window.innerWidth;
+var h = window.innerHeight;
+
+var x = document.getElementById("demo");
+x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
    </script>
    
 </body>
