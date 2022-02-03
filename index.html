@@ -49,6 +49,19 @@
 </div>
    
    
+   <script>
+      let pixelRatioBox = document.querySelector(".pixel-ratio");
+
+const updatePixelRatio = () => {
+  let pr = window.devicePixelRatio;
+  let prString = (pr * 100).toFixed(0);
+  pixelRatioBox.innerText = `${prString}% (${pr.toFixed(2)})`;
+  matchMedia(`(resolution: ${pr}dppx)`).addEventListener("change", updatePixelRatio, { once: true })
+}
+
+updatePixelRatio();
+   </script>
+   
 </body>
 
 </html>
